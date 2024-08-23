@@ -48,6 +48,14 @@ El formato de entrada es un **JSON** donde las claves son los nombres de las aso
     "Asoc4": "Dist2"
 }
 ```
+#### Salida:
+```json
+{
+    "Dist1": ["Asoc1", "Asoc3"],
+    "Dist2": ["Asoc2", "Asoc4"]
+}
+
+```
 ### 2. **INEGI - Año con más personas vivas**
 
 - **URL:** `/betteware/inegi`
@@ -67,3 +75,32 @@ El formato de entrada es un **arreglo bidimensional** de enteros, donde cada sub
     [2000, 2018]
 ]
 ```
+#### Salida:
+
+La salida será un **arreglo** con un único valor que indica el primer año en el que hubo más personas vivas:
+
+```json
+[1981]
+```
+## Comó Ejecutar el Proyecto
+
+#### Usando Gradle
+
+### 1. Clona este repositorio:
+```bash
+git clone https://github.com/alejandrog9z4/challenge-betterware.git
+```
+### 2. Entra en el directorio del proyecto:
+```bash
+cd betterware
+```
+### 3. Construye el proyecto
+```bash
+gradle clean
+gradle build
+```
+### 4. Ejecuta la applicacion
+```bash
+gradle bootRun
+```
+La aplicación estará disponible en **http://localhost:8080**
