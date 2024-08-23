@@ -47,7 +47,7 @@ El formato de entrada es un **JSON** donde las claves son los nombres de las aso
     "Asoc3": "Dist1",
     "Asoc4": "Dist2"
 }
-
+```
 ### 2. **INEGI - Año con más personas vivas**
 
 - **URL:** `/betteware/inegi`
@@ -66,3 +66,4 @@ El formato de entrada es un **arreglo bidimensional** de enteros, donde cada sub
     [1983, 1984],
     [2000, 2018]
 ]
+```
