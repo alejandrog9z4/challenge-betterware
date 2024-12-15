@@ -117,3 +117,8 @@ gradle buildDockerImage
 ```bash
 docker run -d -p 8080:8080 challenge-agudinoz-betterware:latest
 ```
+
+### 3. VErificar imagen en docker hub atravez del siguiente comando :
+```bash
+docker pull alejandrogudino/betteware:tagname
+```
