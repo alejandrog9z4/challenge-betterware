@@ -1,0 +1,40 @@
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
+jobs:
+  test_job:
+    name: test_acctions
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v4
+      - name: Setup Java
+        uses: yumemi-inc/setup-java-gradle@v2.0.0
+        with:
+          java-version: 17
+          java-distribution: zulu
+          
+      - name: Clean with gradle
+        run: gradle clean
+        
+      - name: Build Jar with gradle
+        run: gradle build
+        
+      - name: Setup Docker
+        uses: docker/setup-docker-action@v4.0.0
+        
+      - name: CreateImage
+        run: gradle builddockerImage
+     
+      - name: Push Image to registry
+        run: docker push alejandrogudino/betteware:latest
+      
+
+  
+  
+    
