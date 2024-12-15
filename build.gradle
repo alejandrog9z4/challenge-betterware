@@ -42,5 +42,5 @@ tasks.named('test') {
 
 task buildDockerImage(type: com.bmuschko.gradle.docker.tasks.image.DockerBuildImage) {
 	inputDir = project.file('.')
-	images.add("challenge-agudinoz-betterware:latest")
+	images.add("betterware:latest")
 }
