@@ -28,6 +28,9 @@ jobs:
         
       - name: CreateImage
         run: gradle builddockerImage
+  
+      - name: Login Docker 
+        run: docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin ${{ secrets.DOCKER_PASSWORD }}
      
       - name: Push Image to registry
         run: docker push alejandrogudino/betteware:latest
