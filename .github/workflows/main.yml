@@ -27,7 +27,7 @@ jobs:
         uses: docker/setup-docker-action@v4.0.0
         
       - name: CreateImage
-        run: gradle builddockerImage
+        run: docker build -t alejandrogudino/betteware:latest .
       
       - name: List Images
         run: docker image ls
