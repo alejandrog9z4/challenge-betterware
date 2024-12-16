@@ -28,6 +28,9 @@ jobs:
         
       - name: CreateImage
         run: gradle builddockerImage
+      
+      - name: List Images
+        run: docker image ls
   
       - name: Docker Login
         uses: docker/login-action@v2
